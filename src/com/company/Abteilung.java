@@ -5,8 +5,9 @@ import javax.print.DocFlavor;
 public class Abteilung {
     private String name;
     private Person leiter;
+    private String tempParent = "";
 
-    private Abteilung[] unterAbteilung = new Abteilung[10];
+    Abteilung[] unterAbteilung = new Abteilung[10];
     Person[] mitarbeiter = new Person[128];
 
 
@@ -89,5 +90,13 @@ public class Abteilung {
 
     public String getName() {
         return name;
+    }
+
+    public String getTempParent() {
+        return tempParent;
+    }
+
+    public void setTempParent(String tempParent) {
+        this.tempParent = tempParent;
     }
 }
